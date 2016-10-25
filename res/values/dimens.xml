@@ -55,12 +55,22 @@
     <dimen name="card_content_height">200dp</dimen>
     <dimen name="min_tile_width">200dp</dimen>
     <!-- Main Activity -->
+    <dimen name="ui_main_navigation_bar_width">108dp</dimen>
     <dimen name="ui_main_hsv_text_size">23sp</dimen>
     <dimen name="ui_main_hsv_text_margin_bottom">10dp</dimen>
-    <dimen name="ui_main_hsv_item_size">200dp</dimen>
+    <dimen name="ui_main_hsv_item_width">185dp</dimen>
+    <dimen name="ui_main_hsv_item_height">200dp</dimen>
+    <dimen name="ui_main_hsv_item_margin">2dp</dimen>
+    <dimen name="ui_main_hsv_height">204dp</dimen>
+    <dimen name="ui_main_surface_height">276dp</dimen>
+    <dimen name="ui_main_surface_width">490dp</dimen>
+    <dimen name="ui_main_clock_text_size">77sp</dimen>
+    <dimen name="ui_main_clock_margin_top">60dp</dimen>
+    <dimen name="ui_main_clock_margin_left">15dp</dimen>
+    <dimen name="ui_main_date_text_size">24sp</dimen>
 
     <!-- Multimedia Activity -->
-    <dimen name="ui_media_text_item_size">45sp</dimen>
+    <dimen name="ui_media_text_item_size">35sp</dimen>
 
     <!-- Near Search Activity -->
     <dimen name="ui_near_item_height">185dp</dimen>
@@ -83,9 +93,9 @@
     <dimen name="setting_tab_image">70px</dimen>
     <dimen name="setting_tab_text">25px</dimen>
     <dimen name="ui_topbar_height">95dp</dimen>
-    
+
     <!-- WeChat -->
-    
+
     <dimen name="LargeTextSize">16dp</dimen>
     <dimen name="BasicTextSize">15dp</dimen>
     <dimen name="TitleTextSize">18dp</dimen>

@@ -1,27 +1,21 @@
 package com.tchip.carlauncher.ui.activity;
 
-import com.tchip.carlauncher.Constant;
 import com.tchip.carlauncher.R;
+import com.tchip.carlauncher.util.OpenUtil;
+import com.tchip.carlauncher.util.OpenUtil.MODULE_TYPE;
 
 import android.app.Activity;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MultimediaActivity extends Activity {
-
-	private SharedPreferences preferences;
-	private Editor editor;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,97 +25,38 @@ public class MultimediaActivity extends Activity {
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		setContentView(R.layout.activity_multimedia);
-
-		preferences = getSharedPreferences(Constant.SHARED_PREFERENCES_NAME,
-				MODE_PRIVATE);
-		editor = preferences.edit();
 		initLayout();
 	}
 
 	private void initLayout() {
 		// 图片
-		RelativeLayout layoutImage = (RelativeLayout) findViewById(R.id.layoutImage);
-		layoutImage.setOnClickListener(new MyOnClickListener());
+		ImageView imageGallery = (ImageView) findViewById(R.id.imageGallery);
+		imageGallery.setOnClickListener(new MyOnClickListener());
 
-		// 人脸检测
-		RelativeLayout imageSearch = (RelativeLayout) findViewById(R.id.layoutFace);
-		imageSearch.setOnClickListener(new MyOnClickListener());
-
-		// 音乐
-		RelativeLayout layoutMusic = (RelativeLayout) findViewById(R.id.layoutMusic);
-		layoutMusic.setOnClickListener(new MyOnClickListener());
+		TextView textGallery = (TextView) findViewById(R.id.textGallery);
+		textGallery.setOnClickListener(new MyOnClickListener());
 
 		// 视频
-		RelativeLayout layoutVideo = (RelativeLayout) findViewById(R.id.layoutVideo);
-		layoutVideo.setOnClickListener(new MyOnClickListener());
+		ImageView imageVideo = (ImageView) findViewById(R.id.imageVideo);
+		imageVideo.setOnClickListener(new MyOnClickListener());
 
-		// 返回
-		Button btnToMainFromMultimedia = (Button) findViewById(R.id.btnBack);
-		btnToMainFromMultimedia.setOnClickListener(new MyOnClickListener());
-
+		TextView textVideo = (TextView) findViewById(R.id.textVideo);
+		textVideo.setOnClickListener(new MyOnClickListener());
 	}
 
 	class MyOnClickListener implements View.OnClickListener {
 		@Override
 		public void onClick(View v) {
 			switch (v.getId()) {
-			case R.id.layoutImage:
-				try {
-					ComponentName componentImage = new ComponentName(
-							"com.android.gallery3d",
-							"com.android.gallery3d.app.GalleryActivity");
-					Intent intentImage = new Intent();
-					intentImage.setComponent(componentImage);
-					intentImage.addCategory(Intent.CATEGORY_LAUNCHER);
-					intentImage.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-					startActivity(intentImage);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+			case R.id.textGallery:
+			case R.id.imageGallery:
+				OpenUtil.openModule(MultimediaActivity.this,
+						MODULE_TYPE.GALLERY);
 				break;
 
-			case R.id.layoutFace:
-				Intent intentFaceDetect = new Intent(getApplicationContext(),
-						FaceDetectActivity.class);
-				startActivity(intentFaceDetect);
-				break;
-
-			case R.id.layoutMusic:
-				try {
-					ComponentName componentMusic;
-					// 普通HD版："cn.kuwo.kwmusichd","cn.kuwo.kwmusichd.WelcomeActivity"
-					// 车载HD版："cn.kuwo.kwmusiccar","cn.kuwo.kwmusiccar.WelcomeActivity"
-					componentMusic = new ComponentName("cn.kuwo.kwmusiccar",
-							"cn.kuwo.kwmusiccar.WelcomeActivity");
-					Intent intentMusic = new Intent();
-					intentMusic.setComponent(componentMusic);
-					startActivity(intentMusic);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-				break;
-
-			case R.id.layoutVideo:
-				// intentVideo.setAction("android.intent.action.VIEW");
-				// intentVideo.addCategory("android.intent.category.LAUNCHER");
-				try {
-					ComponentName componentVideo = new ComponentName(
-							"com.mediatek.videoplayer",
-							"com.mediatek.videoplayer.MovieListActivity");
-					Intent intentVideo = new Intent();
-					intentVideo.setComponent(componentVideo);
-					intentVideo.addCategory(Intent.CATEGORY_DEFAULT);
-					intentVideo.addCategory(Intent.CATEGORY_LAUNCHER);
-					intentVideo.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-							| Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-					startActivity(intentVideo);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-				break;
-
-			case R.id.btnBack:
-				backToMain();
+			case R.id.textVideo:
+			case R.id.imageVideo:
+				OpenUtil.openModule(MultimediaActivity.this, MODULE_TYPE.VIDEO);
 				break;
 			}
 		}

@@ -1,9 +1,7 @@
 package com.tchip.carlauncher.service;
 
 import android.app.Service;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -13,9 +11,9 @@ import android.os.IBinder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.tchip.carlauncher.Constant;
-import com.tchip.carlauncher.MyApplication;
+import com.tchip.carlauncher.MyApp;
 import com.tchip.carlauncher.R;
+import com.tchip.carlauncher.util.HintUtil;
 import com.tchip.carlauncher.util.MyLog;
 import com.tchip.carlauncher.util.SettingUtil;
 
@@ -53,14 +51,9 @@ public class SensorWatchService extends Service {
 		sensorEventListener = new SensorEventListener() {
 			@Override
 			public void onSensorChanged(SensorEvent event) {
-				// if (MyApplication.isSleeping) {
-				// stopSelf();
-				// MyLog.v("[SensorWatchService]stopSelf in case of isSleeping = true");
-				// return;
-				// }
-				if (MyApplication.isCrashOn) {
+				if (MyApp.isAccOn && MyApp.isCrashOn) {
 					LIMIT_X = LIMIT_Y = LIMIT_Z = SettingUtil
-							.getGravityVauleBySensitive(MyApplication.crashSensitive);
+							.getGravityVauleBySensitive(MyApp.crashSensitive);
 					valueX = event.values[AXIS_X];
 					valueY = event.values[AXIS_Y];
 					valueZ = event.values[AXIS_Z];
@@ -69,22 +62,19 @@ public class SensorWatchService extends Service {
 						crashFlag[0] = 1;
 						isCrash = true;
 					}
-					// if (valueY > LIMIT_Y || valueY < -LIMIT_Y) {
-					// crashFlag[1] = 1;
-					// isCrash = true;
-					// }
 					if (valueZ > LIMIT_Z || valueZ < -LIMIT_Z) {
 						crashFlag[2] = 1;
 						isCrash = true;
 					}
 					if (isCrash) {
 						// 当前录制视频加锁
-						if (MyApplication.isVideoReording
-								&& !MyApplication.isVideoLock) {
-							MyApplication.isVideoLock = true;
-							MyApplication.isCrashed = true;
-							startSpeak(getResources().getString(
-									R.string.lock_video_in_case_crash));
+						if (MyApp.isVideoReording && !MyApp.isVideoLock) {
+							MyApp.isVideoLock = true;
+							MyApp.isCrashed = true;
+							HintUtil.speakVoice(
+									getApplicationContext(),
+									getResources().getString(
+											R.string.hint_video_lock));
 							MyLog.v("[SensorWarchService] Crashed -> isVideoLock = true;X:"
 									+ valueX + ",Y:" + valueY + ",Z:" + valueZ);
 						}
@@ -119,12 +109,6 @@ public class SensorWatchService extends Service {
 		super.onDestroy();
 	}
 
-	private void startSpeak(String content) {
-		Intent intent = new Intent(getApplicationContext(), SpeakService.class);
-		intent.putExtra("content", content);
-		startService(intent);
-	}
-
 	@Override
 	public IBinder onBind(Intent arg0) {
 		return null;
@@ -141,10 +125,13 @@ public class SensorWatchService extends Service {
 		switch (axis) {
 		case AXIS_X:
 			return valueX;
+
 		case AXIS_Y:
 			return valueY;
+
 		case AXIS_Z:
 			return valueZ;
+
 		default:
 			return 0f;
 		}
