@@ -783,7 +783,6 @@ public class MainActivity extends Activity implements TachographCallback,
 			String[] arrayKillApp = { "cn.kuwo.kwmusiccar", // 酷我音乐
 					"com.android.gallery3d", // 图库
 					"com.autonavi.amapauto", // 高德地图（车机版）
-					"com.autonavi.amapautolite", // 高德地图（车镜版）
 					"com.hdsc.monitor.heart.monitorvoice", // 善领云中心
 					"com.ximalaya.ting.android.car", // 喜马拉雅（车机版）
 					"com.autonavi.minimap" // 高德地图
@@ -1479,14 +1478,14 @@ public class MainActivity extends Activity implements TachographCallback,
 	private void setSurfaceLarge(boolean isLarge) {
 		if (isLarge) {
 			// 16/9 = 1.7778;854/480 = 1.7791
-			int widthFull = 854; // 854;
+			int widthFull = 1280; // 854;
 			int heightFull = 480;
 			surfaceCamera.setLayoutParams(new RelativeLayout.LayoutParams(
 					widthFull, heightFull));
 			isSurfaceLarge = true;
 			updateButtonState(true);
 		} else {
-			int widthSmall = 490; // 480
+			int widthSmall = 720; // 480
 			int heightSmall = 276; // 270
 			surfaceCamera.setLayoutParams(new RelativeLayout.LayoutParams(
 					widthSmall, heightSmall));
@@ -1650,8 +1649,7 @@ public class MainActivity extends Activity implements TachographCallback,
 				if (MyApp.shouldStopWhenCrashVideoSave && MyApp.isVideoReording) {
 					if (secondCount == Constant.Record.parkVideoLength) {
 						String videoTimeStr = sharedPreferences.getString(
-								"videoTime", ""
-										+ Constant.Record.DEFAULT_VIDEO_LENGTH);
+								"videoTime", "3");
 						intervalState = "1".equals(videoTimeStr) ? Constant.Record.STATE_INTERVAL_1MIN
 								: Constant.Record.STATE_INTERVAL_3MIN;
 
@@ -1967,9 +1965,8 @@ public class MainActivity extends Activity implements TachographCallback,
 				break;
 
 			case R.id.imageNavi:
-				OpenUtil.openModule(
-						MainActivity.this,
-						Constant.Module.isPublic ? MODULE_TYPE.NAVI_GAODE_MIRROR
+				OpenUtil.openModule(MainActivity.this,
+						Constant.Module.isPublic ? MODULE_TYPE.NAVI_GAODE_CAR
 								: MODULE_TYPE.NAVI_GAODE);
 				break;
 
@@ -2145,8 +2142,7 @@ public class MainActivity extends Activity implements TachographCallback,
 		resolutionState = "1080".equals(videoSizeStr) ? Constant.Record.STATE_RESOLUTION_1080P
 				: Constant.Record.STATE_RESOLUTION_720P;
 
-		String videoTimeStr = sharedPreferences.getString("videoTime", ""
-				+ Constant.Record.DEFAULT_VIDEO_LENGTH); // 视频分段
+		String videoTimeStr = sharedPreferences.getString("videoTime", "3"); // 视频分段
 		intervalState = "1".equals(videoTimeStr) ? Constant.Record.STATE_INTERVAL_1MIN
 				: Constant.Record.STATE_INTERVAL_3MIN;
 	}

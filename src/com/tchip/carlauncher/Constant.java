@@ -190,9 +190,6 @@ public interface Constant {
 		/** 帧率 */
 		public static final int FRAME_RATE = Module.isPublic ? 24 : 30;
 
-		/** 默认分段 */
-		public static final int DEFAULT_VIDEO_LENGTH = Module.isPublic ? 1 : 3;
-
 		// 分辨率
 		public static final int STATE_RESOLUTION_720P = 0;
 		public static final int STATE_RESOLUTION_1080P = 1;
@@ -273,7 +270,7 @@ public interface Constant {
 
 	public static final class Module {
 		/** 是否是公版软件 */
-		public static final boolean isPublic = true;
+		public static final boolean isPublic = false;
 
 		/** 双录是否录制到单卡 */
 		public static final boolean isRecordSingleCard = true;
@@ -294,7 +291,7 @@ public interface Constant {
 		public static final boolean hasECarOnline = isPublic;
 
 		/** 是否有网络电台 */
-		public static final boolean hasOnlineFM = false;// isPublic;
+		public static final boolean hasOnlineFM = isPublic;
 
 		/** 是否提示90s后启动停车守卫 */
 		public static final boolean hintParkingMonitor = !isPublic;

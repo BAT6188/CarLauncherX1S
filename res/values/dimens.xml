@@ -63,7 +63,7 @@
     <dimen name="ui_main_hsv_item_margin">2dp</dimen>
     <dimen name="ui_main_hsv_height">204dp</dimen>
     <dimen name="ui_main_surface_height">276dp</dimen>
-    <dimen name="ui_main_surface_width">490dp</dimen>
+    <dimen name="ui_main_surface_width">720dp</dimen>
     <dimen name="ui_main_clock_text_size">77sp</dimen>
     <dimen name="ui_main_clock_margin_top">60dp</dimen>
     <dimen name="ui_main_clock_margin_left">15dp</dimen>
