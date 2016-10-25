@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">CarLauncher</string>
+    <!-- 请替换成在语音云官网申请的appid -->
+    <string name="app_id">5531bef5</string>
+    <string name="example_explain">example_explain</string>
+    <string name="text_tts_source">text_tts_source</string>
+    <string name="text_tts_source_en">text_tts_source_en</string>
+    <string name="text_isr_abnf_hint">\t上传内容为：\n\t#ABNF 1.0 gb2312;\n\tlanguage zh-CN;\n\tmode voice;\n\troot $main;\n\t$main = $place1 到$place2 ;\n\t$place1 = 北京 | 武汉 | 南京 | 天津 | 东京;\n\t$place2 = 上海 | 合肥;</string>
+    <string name="text_understand_hint">\t您可以说：\t导航到深圳北站 \t打电话给老王 \t发短信给小张晚上一起吃饭 \t启动百度地图 \t广州天气怎么样 \t聊聊天吧</string>
+    <!-- \n\n\t更多语义请登录：\n\thttp://osp.voicecloud.cn/ \n\t配置您的专属语义吧! -->
+    <!-- 听写 -->
+    <string name="text_begin">请开始说话…</string>
+    <string name="text_upload_contacts">上传联系人</string>
+    <string name="text_upload_userwords">上传用户词表</string>
+    <string name="text_upload_success">上传成功</string>
+    <string name="text_userword_empty">词表下载失败或内容为空</string>
+    <string name="text_download_success">下载成功</string>
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+    <string name="pref_title_iat_dwa">结果动态修正</string>
+
+    <!-- 合成 -->
+    <string-array name="engine_entries">
+        <item>本地合成</item>
+        <item>在线合成</item>
+    </string-array>
+    <string-array name="engine_values">
+        <item>local</item>
+        <item>cloud</item>
+    </string-array>
+    <string-array name="voicer_cloud_entries">
+        <item>小燕</item>
+        <item>小宇</item>
+        <item>凯瑟琳</item>
+        <item>亨利</item>
+        <item>玛丽</item>
+        <item>小研</item>
+        <item>小琪</item>
+        <item>小峰</item>
+        <item>小梅</item>
+        <item>小莉</item>
+        <item>小蓉</item>
+        <item>小芸</item>
+        <item>小坤</item>
+        <item>小强 </item>
+        <item>小莹</item>
+        <item>小新</item>
+        <item>楠楠</item>
+        <item>老孙</item>
+    </string-array>
+    <string-array name="voicer_cloud_values">
+        <item>xiaoyan</item>
+        <item>xiaoyu</item>
+        <item>catherine</item>
+        <item>henry</item>
+        <item>vimary</item>
+        <item>vixy</item>
+        <item>xiaoqi</item>
+        <item>vixf</item>
+        <item>xiaomei</item>
+        <item>xiaolin</item>
+        <item>xiaorong</item>
+        <item>xiaoqian</item>
+        <item>xiaokun</item>
+        <item>xiaoqiang</item>
+        <item>vixying</item>
+        <item>xiaoxin</item>
+        <item>nannan</item>
+        <item>vils</item>
+    </string-array>
+    <string-array name="stream_entries">
+        <item>通话</item>
+        <item>系统</item>
+        <item>铃声</item>
+        <item>音乐</item>
+        <item>闹铃</item>
+        <item>通知</item>
+    </string-array>
+    <string-array name="stream_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string name="tts_toast_format" formatted="false">缓冲进度为%d%%，播放进度为%d%%</string>
+    <!-- 语言 -->
+    <string-array name="language_entries">
+        <item>普通话</item>
+        <item>粤语</item>
+        <item>河南话</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>mandarin</item>
+        <item>cantonese</item>
+        <item>henanese</item>
+        <item>en_us</item>
+    </string-array>
+    <!-- 语音评测 -->
+    <string name="text_en_word">"[word]\napple\nbanana\norange"</string>
+    <string name="text_en_sentence">"The quick brown fox jumps over the lazy dog."</string>
+    <string name="text_cn_syllable">"知，痴，是"</string>
+    <string name="text_cn_word">"磁铁，率领，脆弱，动手，古筝"</string>
+    <string name="text_cn_sentence">"一座座雪峰插入云霄，峰顶银光闪闪，大大小小的湖泊，像颗颗宝石镶嵌在彩带般的沟谷中。"</string>
+
+    <string-array name="ise_language_entries">
+        <item>英语</item>
+        <item>汉语</item>
+    </string-array>
+    <string-array name="ise_language_values">
+        <item>en_us</item>
+        <item>zh_cn</item>
+    </string-array>
+    <string-array name="category_entries">
+        <item>单字</item>
+        <item>词语</item>
+        <item>句子</item>
+    </string-array>
+    <string-array name="category_values">
+        <item>read_syllable</item>
+        <item>read_word</item>
+        <item>read_sentence</item>
+    </string-array>
+    <string-array name="result_level_entries">
+        <item>plain</item>
+        <item>complete</item>
+    </string-array>
+    <!-- 标点符号 -->
+    <string-array name="punc_entries">
+        <item>有标点</item>
+        <item>无标点</item>
+    </string-array>
+    <string-array name="punc_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="dwa_entries">
+        <item>开启</item>
+        <item>关闭</item>
+    </string-array>
+    <!-- 提示安装语音+对话框 -->
+    <string name="superman_ok">确 定</string>
+    <string name="superman_cancel">取 消</string>
+    <string name="superman_title">来 吧 !</string>
+    <string name="superman_content">让我把你的应用变的能听会说吧！</string>
+
+    <string-array name="jazzy_effects">
+        <item>Standard</item>
+        <item>Tablet</item>
+        <item>CubeIn</item>
+        <item>CubeOut</item>
+        <item>FlipVertical</item>
+        <item>FlipHorizontal</item>
+        <item>Stack</item>
+        <item>ZoomIn</item>
+        <item>ZoomOut</item>
+        <item>RotateUp</item>
+        <item>RotateDown</item>
+        <item>Accordion</item>
+    </string-array>
+
+    <string name="tab1_text">录像</string>
+    <string name="tab2_text">语音</string>
+    <string name="tab3_text">地图</string>
+    <string name="tab4_text">系统</string>
+
+    <!-- FTP Remote Control -->
+    <string name="wifi_state">WiFi状态</string>
+    <string name="instruction_pre">启动后可以从电脑端远程管理手机文件</string>
+    <string name="instruction">请在“我的电脑”地址栏中输入：</string>
+    <string name="no_wifi">无WiFi网络</string>
+    <string name="no_wifi_hint">无WiFi网络,点击以查看WiFi设置</string>
+    <string name="storage_warning">外部存储不可用.</string>
+    <string name="start_server">启动服务</string>
+    <string name="stop_server">停止服务</string>
+    <string name="notif_title">远程管理服务正在运行</string>
+    <string name="notif_server_starting">远程管理服务已启动</string>
+
+    <!-- Traffic Stats -->
+    <string name="cur_type">当前正在使用：%1$s</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="invalid_network">未连接网络</string>
+    <string name="_3g_above">高速网络（3G、4G）</string>
+    <string name="_2g">普通网络（GPRS）</string>
+    <string name="wap">wap</string>
+    <string name="cur_interval">更新间隔时间：%1$s秒</string>
+    <string name="rate_per_sec">%1$s/s</string>
+
+    <!-- File Manager -->
+    <string name="cannot_read_directory_s">未插入 %s</string>
+    <string name="open_file_with_">打开 %s 为</string>
+    <string name="size_s">大小: %s</string>
+    <string name="folder">%d 条目</string>
+    <string name="open_drawer">打开抽屉</string>
+    <string name="close_drawer">关闭抽屉</string>
+    <string name="remove_favourite">移除收藏</string>
+    <string name="folder_empty">空文件夹</string>
+    <string name="_d_objects">%d 条目</string>
+    <string name="delete_d_items_">删除 %d 个条目?</string>
+    <string name="select_all">全选</string>
+    <string name="rename">重命名</string>
+    <string name="share">分享</string>
+    <string name="_d_files_deleted">已删除 %d 个文件</string>
+    <string name="add_to_homescreen">创建快捷方式</string>
+    <string name="add_to_homescreen_multiple">创建快捷方式</string>
+    <string name="shortcut_created">快捷方式已创建</string>
+    <string name="root">根目录</string>
+    <string name="cut">剪切</string>
+    <string name="paste_here">粘贴到此</string>
+    <string name="objects_cut_to_clipboard">已剪切到剪贴板</string>
+    <string name="files_pasted">文件已粘贴</string>
+    <string name="clipboard_is_empty">剪贴板无内容</string>
+    <string name="refresh">刷新</string>
+    <string name="copy">复制</string>
+    <string name="objects_copied_to_clipboard">已复制到剪贴板</string>
+    <string name="create_folder">新建文件夹</string>
+    <string name="create">新建</string>
+    <string name="folder_created_successfully">成功创建文件夹</string>
+    <string name="loading_">加载中…</string>
+    <string name="folder_could_not_be_created">文件夹未创建</string>
+    <string name="pasting_files_">正在粘贴文件…</string>
+    <string name="downloads">下载</string>
+    <string name="pictures">图片</string>
+    <string name="movies">电影</string>
+    <string name="dcim">DCIM</string>
+    <string name="app_icon">App icon</string>
+    <string name="up">Up</string>
+    <string name="error">Error</string>
+    <string name="rename_file">重命名文件</string>
+    <string name="rename_folder">重命名文件夹</string>
+    <string name="file_renamed">文件重命名成功</string>
+    <string name="file_could_not_be_renamed_to_s">文件无法重命名为： %s</string>
+    <string name="photos">照片</string>
+    <string name="add_favourite">添加收藏</string>
+    <string name="file_info">文件信息</string>
+    <string name="mime_type_s">文件类型: %s</string>
+
+    <!-- 循环录像和文件加锁 -->
+    <string name="back">返回</string>
+    <string name="del_title">删除提示</string>
+    <string name="del_msg">是否要删除该视频吗？\n提示：删除后该视频不可恢复！</string>
+    <string name="del_msg_nodel">是否要删除该碰撞视频吗？\n提示：删除后该视频不可恢复！</string>
+    <string name="del_success">删除成功</string>
+    <string name="del_fail">删除失败</string>
+    <string name="choose_file_ctrl">请选择对视频文件的操作</string>
+    <string name="dlg_keep_save">保存至存档</string>
+    <string name="normal_video">正常视频</string>
+    <string name="urgent_video">紧急视频</string>
+    <string name="keep_save_video">存档视频</string>
+
+    <!-- ChatActivity -->
+    <string name="chat_hello_greet">你好，有什么可以帮您？</string>
+    <string name="what_can_i_say">我可以说什么？</string>
+    <string name="chat_no_answer">小天不知道怎么回答了</string>
+    <string name="hint_no_network">无网络</string>
+    <string name="weather">天气</string>
+    <string name="temperature">温度</string>
+    <string name="start_navigation">正在导航</string>
+    <string name="app_is_openning">正在打开</string>
+    <string name="app_is_not_found">未找到应用</string>
+    <string name="phone_call_to">正在打电话给</string>
+    <string name="contact_not_found">通讯录中未找到</string>
+    <string name="phone_not_support">本机不支持通讯功能</string>
+    <string name="mms_end_to">"正在发短信给</string>
+    <string name="mms_content_empty">短信内容为空</string>
+    <string name="mms_send_success">短信发送成功</string>
+
+    <!-- MainActivity -->
+    <string name="not_locate">未定位</string>
+    <string name="unknown">未知</string>
+    <string name="video_lock">视频加锁</string>
+    <string name="video_unlock">视频解锁</string>
+    <string name="hint_video_size_720">分辨率七二零P</string>
+    <string name="hint_video_size_1080">分辨率一零八零P</string>
+    <string name="hint_video_time_5">视频分段五分钟</string>
+    <string name="hint_video_time_3">视频分段三分钟</string>
+    <string name="hint_video_time_1">视频分段一分钟</string>
+    <string name="hint_video_mute_off">录音</string>
+    <string name="hint_video_mute_on">静音</string>
+    <string name="storage_full_and_delete_lock">空间不足，将清理加锁视频</string>
+    <string name="storage_full_cause_by_other">空间不足，请清理存储卡2</string>
+    <string name="sd2_not_exist">存储卡二不存在</string>
+    <string name="sd1_not_exist">存储卡一不存在</string>
+    <string name="sd_remove_badly">存储卡异常，停止录像</string>
+    <string name="stop_record_power_unconnect">电源断开，停止录像</string>
+    <string name="stop_record_sleep_on">进入休眠</string>
+    <string name="stop_record_sleeping">正在休眠</string>
+    <string name="photo_save">照片已保存</string>
+    <string name="title_navigation">导航</string>
+    <string name="title_chat">语音助手</string>
+    <string name="title_music_online">在线音乐</string>
+    <string name="title_edog">电子狗</string>
+    <string name="title_multimedia">多媒体</string>
+    <string name="title_near_search">周边搜索</string>
+    <string name="title_drive_route">行车轨迹</string>
+    <string name="title_route_plan">路径规划</string>
+    <string name="title_file_manager">文件管理</string>
+    <string name="title_message">短信</string>
+    <string name="title_phone">电话</string>
+    <string name="title_setting">设置</string>
+
+    <!-- MultimediaActivity -->
+    <string name="music_play_now">正在播放</string>
+    <string name="music_play_recent">最近播放</string>
+    <string name="music">音乐</string>
+    <string name="picture">图库</string>
+    <string name="video">视频</string>
+
+    <!-- NavigationActivity -->
+    <string name="near_oil_station">加油站</string>
+    <string name="near_parking">停车场</string>
+    <string name="near_4s">4S</string>
+    <string name="near_atm">ATM</string>
+    <string name="near_market">超市</string>
+    <string name="near_hotel">酒店</string>
+    <string name="location_here">当前位置</string>
+    <string name="set_location_company">请设置公司地址</string>
+    <string name="set_location_home">请设置家庭地址</string>
+    <string name="poi_search_near">正在查找</string>
+    <string name="poi_search">查找</string>
+    <string name="poi_in_city">在</string>
+    <string name="poi_no_result">未找到结果</string>
+    <string name="poi_has_result">找到结果</string>
+    <string name="navigation_with_blank">导 航</string>
+    <string name="near_with_blank">周 边</string>
+    <string name="star_with_blank">收 藏</string>
+    <string name="destination_city">目的地城市</string>
+    <string name="input_navigation_destination">输入导航目的地</string>
+    <string name="star_company">公司</string>
+    <string name="star_home">家</string>
+    <string name="hint_navi_init_fail">导航实例正在初始化，请稍候</string>
+    <string name="hint_navi_auth_fail">导航实例正在授权，请稍候（首次需重启）</string>
+    <string name="hint_navi_resume">有未完成的导航，是否还原？</string>
+
+    <string-array name="navi_intent">
+        <item>导航去</item>
+        <item>导航到</item>
+        <item>我要去</item>
+        <item>导航</item>
+        <item>去</item>
+        <item>到</item>
+    </string-array>
+
+    <!-- OfflineBaiduMapActivity -->
+    <string name="start_download">开始下载</string>
+    <string name="offline_download_start">开始下载离线地图</string>
+    <string name="offline_download_pause">暂停下载离线地图</string>
+    <string name="offline_download_delete">删除离线地图</string>
+    <string name="no_match_city">未找到相关城市</string>
+    <string name="not_import_offline_map">没有导入离线包，这可能是离线包放置位置不正确，或离线包已经导入过</string>
+    <string name="import_success">成功导入 %d 个离线包，可以在下载管理查看</string>
+    <string name="has_update">可更新</string>
+    <string name="update">更新</string>
+    <string name="no_update">最新</string>
+    <string name="re_download">重新下载</string>
+    <string name="map_list">地图列表</string>
+    <string name="download_manager">下载管理</string>
+    <string name="input_city_name">    输入城市名</string>
+    <string name="city_downloaded">已下载城市</string>
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
+    <string name="delete">删除</string>
+    <string name="download_state_default">已下载:--</string>
+
+    <!-- RouteShowActivity -->
+    <string name="no_route_file">未找到对应轨迹文件</string>
+    <string name="share_route_screenshot_to">分享轨迹图到</string>
+    <string name="share_route">分享轨迹</string>
+    <string name="route_point_less">轨迹点数目少于2个，无法绘制</string>
+    <string name="linear_diatance">直线距离</string>
+    <string name="drive_distance">行驶距离</string>
+    <string name="meter">米</string>
+    <string name="location_end">终点位置</string>
+    <string name="location_start">起始位置</string>
+    <string name="route_is_loading">正在加载轨迹，请稍候...</string>
+
+    <!-- TrafficChatActivity -->
+    <string name="data_error">数据异常</string>
+    <string name="data_not_load">未加载数</string>
+    <string name="traffic_state">天流量情况（单位：MB）</string>
+
+    <!-- UpdateMapActivity -->
+    <string name="sd_has_no_map">存储卡未检测到离线地图包</string>
+    <string name="sd_has_map">存储卡检测到%d个离线地图包</string>
+    <string name="hint_import_is_cost_time">导入离线地图比较耗时，现在导入？</string>
+    <string name="hint">提示</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="import_sd_success">离线地图更新完成.</string>
+    <string name="importing_not_exist">正在导入离线地图，请勿离开。</string>
+
+    <!-- WeatherActivity -->
+    <string name="locate_fail_no_weather">定位失败，无法获取天气信息</string>
+    <string name="get_weather_fail">天气获取失败，请稍候重试</string>
+    <string name="weather_colon">天气：</string>
+    <string name="humidity_colon">湿度：</string>
+    <string name="weather_post_time">发布时间</string>
+    <string name="weather_today">今日天气</string>
+    <string name="weather_default_wind_info">东北风5</string>
+    <string name="weather_temp_range_to">到</string>
+
+    <!-- WifiListActivity -->
+    <string name="wifi_connecting">正在连接</string>
+
+    <!-- FmTransmitActivity -->
+    <string name="title_fm_transmit">FM发射</string>
+
+    <!-- SettingGravityActivity -->
+    <string name="title_setting_gravity">系统设置-碰撞侦测灵敏度</string>
+    <string name="setting_gravity_hint">设置合适的灵敏度：\n过低较难触发视频加锁，过高则容易导致误判</string>
+    <string name="lock_video_in_case_crash">视频加锁</string>
+    
+    <!-- SettingFragment -->
+    <string name="tilte_traffic_status">流量统计</string>
+
+</resources>
