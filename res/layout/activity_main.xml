@@ -24,9 +24,8 @@
 
         <TextClock
             android:id="@+id/textClock"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_marginLeft="@dimen/ui_main_clock_margin_left"
             android:layout_marginTop="@dimen/ui_main_clock_margin_top"
             android:format12Hour="HH:mm"
@@ -48,8 +47,8 @@
                 android:id="@+id/textDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:format12Hour="yy年MM月dd日"
-                android:format24Hour="yy年MM月dd日"
+                android:format12Hour="yyyy年MM月dd日"
+                android:format24Hour="yyyy年MM月dd日"
                 android:textColor="#ffe1c5"
                 android:textSize="@dimen/ui_main_date_text_size" />
 
@@ -58,8 +57,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:format12Hour="E"
-                android:format24Hour="E"
+                android:format12Hour="EEEE"
+                android:format24Hour="EEEE"
                 android:textColor="#ffe1c5"
                 android:textSize="@dimen/ui_main_date_text_size" />
         </LinearLayout>
@@ -697,7 +696,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="20dp"
-                android:layout_marginLeft="225dp"
+                android:layout_marginLeft="440dp"
                 android:padding="15dp" >
 
                 <ImageView

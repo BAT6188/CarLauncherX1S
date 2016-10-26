@@ -64,10 +64,10 @@
     <dimen name="ui_main_hsv_height">204dp</dimen>
     <dimen name="ui_main_surface_height">276dp</dimen>
     <dimen name="ui_main_surface_width">720dp</dimen>
-    <dimen name="ui_main_clock_text_size">77sp</dimen>
+    <dimen name="ui_main_clock_text_size">90sp</dimen>
     <dimen name="ui_main_clock_margin_top">60dp</dimen>
-    <dimen name="ui_main_clock_margin_left">15dp</dimen>
-    <dimen name="ui_main_date_text_size">24sp</dimen>
+    <dimen name="ui_main_clock_margin_left">30dp</dimen>
+    <dimen name="ui_main_date_text_size">30sp</dimen>
 
     <!-- Multimedia Activity -->
     <dimen name="ui_media_text_item_size">35sp</dimen>
