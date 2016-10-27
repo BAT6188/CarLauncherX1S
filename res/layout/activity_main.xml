@@ -31,7 +31,7 @@
             android:format12Hour="HH:mm"
             android:format24Hour="HH:mm"
             android:singleLine="true"
-            android:textColor="#ffe1c5"
+            android:textColor="@color/main_time"
             android:textSize="@dimen/ui_main_clock_text_size" />
 
         <LinearLayout
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:format12Hour="yyyy年MM月dd日"
                 android:format24Hour="yyyy年MM月dd日"
-                android:textColor="#ffe1c5"
+                android:textColor="@color/main_time"
                 android:textSize="@dimen/ui_main_date_text_size" />
 
             <TextClock
@@ -59,7 +59,7 @@
                 android:layout_marginLeft="10dp"
                 android:format12Hour="EEEE"
                 android:format24Hour="EEEE"
-                android:textColor="#ffe1c5"
+                android:textColor="@color/main_time"
                 android:textSize="@dimen/ui_main_date_text_size" />
         </LinearLayout>
 

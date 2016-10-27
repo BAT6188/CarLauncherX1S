@@ -58,7 +58,7 @@
     <dimen name="ui_main_navigation_bar_width">108dp</dimen>
     <dimen name="ui_main_hsv_text_size">23sp</dimen>
     <dimen name="ui_main_hsv_text_margin_bottom">10dp</dimen>
-    <dimen name="ui_main_hsv_item_width">185dp</dimen>
+    <dimen name="ui_main_hsv_item_width">194dp</dimen>
     <dimen name="ui_main_hsv_item_height">200dp</dimen>
     <dimen name="ui_main_hsv_item_margin">2dp</dimen>
     <dimen name="ui_main_hsv_height">204dp</dimen>
@@ -66,7 +66,7 @@
     <dimen name="ui_main_surface_width">720dp</dimen>
     <dimen name="ui_main_clock_text_size">90sp</dimen>
     <dimen name="ui_main_clock_margin_top">60dp</dimen>
-    <dimen name="ui_main_clock_margin_left">30dp</dimen>
+    <dimen name="ui_main_clock_margin_left">60dp</dimen>
     <dimen name="ui_main_date_text_size">30sp</dimen>
 
     <!-- Multimedia Activity -->
