@@ -2245,9 +2245,9 @@ public class MainActivity extends Activity implements TachographCallback,
 			camera = Camera.open(0);
 			camera.lock();
 
-			Camera.Parameters para = camera.getParameters();
-			para.unflatten(Constant.Record.CAMERA_PARAMS);
-			camera.setParameters(para); // 设置系统Camera参数
+			// Camera.Parameters para = camera.getParameters();
+			// para.unflatten(Constant.Record.CAMERA_PARAMS);
+			// camera.setParameters(para); // 设置系统Camera参数
 			camera.setPreviewDisplay(surfaceHolder);
 			camera.startPreview();
 			camera.unlock();
@@ -2868,8 +2868,8 @@ public class MainActivity extends Activity implements TachographCallback,
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			if (isSurfaceLarge) { // 如果视频全屏预览开启，返回关闭
-				int widthSmall = 480;
-				int heightSmall = 270;
+				int widthSmall = 720;
+				int heightSmall = 276;
 				surfaceCamera.setLayoutParams(new RelativeLayout.LayoutParams(
 						widthSmall, heightSmall));
 				isSurfaceLarge = false;
